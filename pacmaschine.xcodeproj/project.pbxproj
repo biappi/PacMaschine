@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3F8977D020A5D2F200EC401A /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 3F8977CF20A5D2F200EC401A /* main.c */; };
+		3F8977DB20A5D32400EC401A /* pactastic.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3F8977D720A5D31800EC401A /* pactastic.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,12 @@
 /* Begin PBXFileReference section */
 		3F8977CC20A5D2F200EC401A /* pacmaschine */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = pacmaschine; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F8977CF20A5D2F200EC401A /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		3F8977D720A5D31800EC401A /* pactastic.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = pactastic.cpp; sourceTree = "<group>"; };
+		3F8977D820A5D31800EC401A /* bitmaps.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bitmaps.h; sourceTree = "<group>"; };
+		3F8977D920A5D31800EC401A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		3F8977DA20A5D31800EC401A /* bgm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bgm.h; sourceTree = "<group>"; };
+		3F8977DC20A5D36A00EC401A /* ArduBoyPlaytune.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArduBoyPlaytune.h; sourceTree = "<group>"; };
+		3F8977DD20A5D36A00EC401A /* ArduBoy2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArduBoy2.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,9 +64,23 @@
 		3F8977CE20A5D2F200EC401A /* pacmaschine */ = {
 			isa = PBXGroup;
 			children = (
+				3F8977D620A5D31700EC401A /* pactastic */,
 				3F8977CF20A5D2F200EC401A /* main.c */,
+				3F8977DD20A5D36A00EC401A /* ArduBoy2.h */,
+				3F8977DC20A5D36A00EC401A /* ArduBoyPlaytune.h */,
 			);
 			path = pacmaschine;
+			sourceTree = "<group>";
+		};
+		3F8977D620A5D31700EC401A /* pactastic */ = {
+			isa = PBXGroup;
+			children = (
+				3F8977D820A5D31800EC401A /* bitmaps.h */,
+				3F8977DA20A5D31800EC401A /* bgm.h */,
+				3F8977D720A5D31800EC401A /* pactastic.cpp */,
+				3F8977D920A5D31800EC401A /* README.md */,
+			);
+			path = pactastic;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -118,6 +139,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F8977DB20A5D32400EC401A /* pactastic.cpp in Sources */,
 				3F8977D020A5D2F200EC401A /* main.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
