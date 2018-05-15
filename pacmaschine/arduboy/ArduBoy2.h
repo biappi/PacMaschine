@@ -409,8 +409,8 @@ public:
 	bool playing() { return false; }
 };
 
-int random(int a, int b) {
-	return 0;
+int random(int a, int b = 0) {
+	return (rand() % (a - b)) + b;
 }
 
 void delay(int ms) {

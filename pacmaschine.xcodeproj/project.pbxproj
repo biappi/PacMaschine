@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F5FF64320AAD30300302C41 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F5FF64220AAD30300302C41 /* AppDelegate.m */; };
+		3F5FF64520AAD30600302C41 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F5FF64420AAD30600302C41 /* Assets.xcassets */; };
+		3F5FF64820AAD30600302C41 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F5FF64620AAD30600302C41 /* MainMenu.xib */; };
+		3F5FF64B20AAD30600302C41 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F5FF64A20AAD30600302C41 /* main.m */; };
+		3F5FF65220AAD3F600302C41 /* PacView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3F5FF65120AAD3F600302C41 /* PacView.mm */; };
+		3F5FF65320AAD42900302C41 /* pactastic.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3F8977D720A5D31800EC401A /* pactastic.cpp */; };
 		3F8977D020A5D2F200EC401A /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 3F8977CF20A5D2F200EC401A /* main.c */; };
 		3F8977DB20A5D32400EC401A /* pactastic.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3F8977D720A5D31800EC401A /* pactastic.cpp */; };
 /* End PBXBuildFile section */
@@ -25,6 +31,16 @@
 
 /* Begin PBXFileReference section */
 		3F5FF63920A9E0C000302C41 /* Arduboy2Font.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Arduboy2Font.h; sourceTree = "<group>"; };
+		3F5FF63F20AAD30300302C41 /* PacMaschine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PacMaschine.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F5FF64120AAD30300302C41 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		3F5FF64220AAD30300302C41 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		3F5FF64420AAD30600302C41 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3F5FF64720AAD30600302C41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		3F5FF64920AAD30600302C41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F5FF64A20AAD30600302C41 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3F5FF64C20AAD30600302C41 /* PacMaschine.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PacMaschine.entitlements; sourceTree = "<group>"; };
+		3F5FF65020AAD3F600302C41 /* PacView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PacView.h; sourceTree = "<group>"; };
+		3F5FF65120AAD3F600302C41 /* PacView.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = PacView.mm; sourceTree = "<group>"; };
 		3F8977CC20A5D2F200EC401A /* pacmaschine */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = pacmaschine; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F8977CF20A5D2F200EC401A /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		3F8977D720A5D31800EC401A /* pactastic.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = pactastic.cpp; sourceTree = "<group>"; };
@@ -36,6 +52,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		3F5FF63C20AAD30300302C41 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3F8977C920A5D2F200EC401A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -46,10 +69,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3F5FF63A20AAD29500302C41 /* arduboy */ = {
+			isa = PBXGroup;
+			children = (
+				3F8977DC20A5D36A00EC401A /* ArduBoyPlaytune.h */,
+				3F8977DD20A5D36A00EC401A /* ArduBoy2.h */,
+				3F5FF63920A9E0C000302C41 /* Arduboy2Font.h */,
+			);
+			path = arduboy;
+			sourceTree = "<group>";
+		};
+		3F5FF64020AAD30300302C41 /* PacMaschine */ = {
+			isa = PBXGroup;
+			children = (
+				3F5FF64120AAD30300302C41 /* AppDelegate.h */,
+				3F5FF64220AAD30300302C41 /* AppDelegate.m */,
+				3F5FF65020AAD3F600302C41 /* PacView.h */,
+				3F5FF65120AAD3F600302C41 /* PacView.mm */,
+				3F5FF64420AAD30600302C41 /* Assets.xcassets */,
+				3F5FF64620AAD30600302C41 /* MainMenu.xib */,
+				3F5FF64920AAD30600302C41 /* Info.plist */,
+				3F5FF64A20AAD30600302C41 /* main.m */,
+				3F5FF64C20AAD30600302C41 /* PacMaschine.entitlements */,
+			);
+			path = PacMaschine;
+			sourceTree = "<group>";
+		};
 		3F8977C320A5D2F100EC401A = {
 			isa = PBXGroup;
 			children = (
 				3F8977CE20A5D2F200EC401A /* pacmaschine */,
+				3F5FF64020AAD30300302C41 /* PacMaschine */,
 				3F8977CD20A5D2F200EC401A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -58,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				3F8977CC20A5D2F200EC401A /* pacmaschine */,
+				3F5FF63F20AAD30300302C41 /* PacMaschine.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -66,10 +117,8 @@
 			isa = PBXGroup;
 			children = (
 				3F8977D620A5D31700EC401A /* pactastic */,
+				3F5FF63A20AAD29500302C41 /* arduboy */,
 				3F8977CF20A5D2F200EC401A /* main.c */,
-				3F8977DD20A5D36A00EC401A /* ArduBoy2.h */,
-				3F8977DC20A5D36A00EC401A /* ArduBoyPlaytune.h */,
-				3F5FF63920A9E0C000302C41 /* Arduboy2Font.h */,
 			);
 			path = pacmaschine;
 			sourceTree = "<group>";
@@ -88,6 +137,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		3F5FF63E20AAD30300302C41 /* PacMaschine */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3F5FF64D20AAD30600302C41 /* Build configuration list for PBXNativeTarget "PacMaschine" */;
+			buildPhases = (
+				3F5FF63B20AAD30300302C41 /* Sources */,
+				3F5FF63C20AAD30300302C41 /* Frameworks */,
+				3F5FF63D20AAD30300302C41 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PacMaschine;
+			productName = PacMaschine;
+			productReference = 3F5FF63F20AAD30300302C41 /* PacMaschine.app */;
+			productType = "com.apple.product-type.application";
+		};
 		3F8977CB20A5D2F200EC401A /* pacmaschine */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3F8977D320A5D2F200EC401A /* Build configuration list for PBXNativeTarget "pacmaschine" */;
@@ -114,6 +180,9 @@
 				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Antonio Malara";
 				TargetAttributes = {
+					3F5FF63E20AAD30300302C41 = {
+						CreatedOnToolsVersion = 9.3;
+					};
 					3F8977CB20A5D2F200EC401A = {
 						CreatedOnToolsVersion = 9.3;
 					};
@@ -125,6 +194,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 3F8977C320A5D2F100EC401A;
 			productRefGroup = 3F8977CD20A5D2F200EC401A /* Products */;
@@ -132,11 +202,35 @@
 			projectRoot = "";
 			targets = (
 				3F8977CB20A5D2F200EC401A /* pacmaschine */,
+				3F5FF63E20AAD30300302C41 /* PacMaschine */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		3F5FF63D20AAD30300302C41 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F5FF64520AAD30600302C41 /* Assets.xcassets in Resources */,
+				3F5FF64820AAD30600302C41 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		3F5FF63B20AAD30300302C41 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F5FF65220AAD3F600302C41 /* PacView.mm in Sources */,
+				3F5FF64B20AAD30600302C41 /* main.m in Sources */,
+				3F5FF65320AAD42900302C41 /* pactastic.cpp in Sources */,
+				3F5FF64320AAD30300302C41 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3F8977C820A5D2F200EC401A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -148,7 +242,54 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXVariantGroup section */
+		3F5FF64620AAD30600302C41 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3F5FF64720AAD30600302C41 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
+		3F5FF64E20AAD30600302C41 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PacMaschine/PacMaschine.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = EPCUPW9SH8;
+				INFOPLIST_FILE = PacMaschine/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = name.malara.antonio.PacMaschine;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		3F5FF64F20AAD30600302C41 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PacMaschine/PacMaschine.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = EPCUPW9SH8;
+				INFOPLIST_FILE = PacMaschine/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = name.malara.antonio.PacMaschine;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		3F8977D120A5D2F200EC401A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -279,6 +420,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		3F5FF64D20AAD30600302C41 /* Build configuration list for PBXNativeTarget "PacMaschine" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F5FF64E20AAD30600302C41 /* Debug */,
+				3F5FF64F20AAD30600302C41 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		3F8977C720A5D2F100EC401A /* Build configuration list for PBXProject "pacmaschine" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
