@@ -24,6 +24,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3F5FF63920A9E0C000302C41 /* Arduboy2Font.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Arduboy2Font.h; sourceTree = "<group>"; };
 		3F8977CC20A5D2F200EC401A /* pacmaschine */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = pacmaschine; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F8977CF20A5D2F200EC401A /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		3F8977D720A5D31800EC401A /* pactastic.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = pactastic.cpp; sourceTree = "<group>"; };
@@ -68,6 +69,7 @@
 				3F8977CF20A5D2F200EC401A /* main.c */,
 				3F8977DD20A5D36A00EC401A /* ArduBoy2.h */,
 				3F8977DC20A5D36A00EC401A /* ArduBoyPlaytune.h */,
+				3F5FF63920A9E0C000302C41 /* Arduboy2Font.h */,
 			);
 			path = pacmaschine;
 			sourceTree = "<group>";
