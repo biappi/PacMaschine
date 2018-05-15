@@ -12,6 +12,7 @@
 #include <stdio.h>
 #include <stdint.h>
 #include <stdlib.h>
+#include <unistd.h>
 
 #include <algorithm>
 
@@ -23,8 +24,10 @@
 
 using namespace std;
 
-const int       WIDTH  = 255;
-const int       HEIGHT =  64;
+extern const int       WIDTH  = 255;
+extern const int       HEIGHT =  64;
+
+void want_a_frame(const uint8_t * data, int w, int h);
 
 struct Rect {
 	int x, y, width, height;
@@ -83,8 +86,10 @@ public:
 
 	// -- //
 	
-	void setFrameRate(int framerate) {
-		
+	int framerate = 30;
+	
+	void setFrameRate(int rate) {
+		framerate = rate;
 	}
 	
 	void begin() {
@@ -92,11 +97,12 @@ public:
 	}
 	
 	void clear() {
-		
+		memset(sBuffer, 0, WIDTH * HEIGHT);
 	}
 
 	bool nextFrame() {
-		return false;
+		usleep(1/framerate * 1000000);
+		return true;
 	}
 	
 	void delay() {
@@ -269,7 +275,7 @@ public:
 	}
 	
 	void display() {
-		
+		want_a_frame(sBuffer, WIDTH, HEIGHT);
 	}
 	
 	// -- //
@@ -414,7 +420,7 @@ int random(int a, int b = 0) {
 }
 
 void delay(int ms) {
-	
+	usleep(ms * 1000);
 }
 
 
