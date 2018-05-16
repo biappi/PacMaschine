@@ -7,51 +7,10 @@
 //
 
 #import "PacView.h"
+#import "MaschineBoi.h"
 
-enum Buttons {
-    UP_BUTTON    = 0x01,
-    DOWN_BUTTON  = 0x02,
-    RIGHT_BUTTON = 0x04,
-    LEFT_BUTTON  = 0x08,
-    A_BUTTON     = 0x10,
-    B_BUTTON     = 0x20,
-    
-};
-
-struct ButtonsState;
-
-extern ButtonsState globalButtonsState;
-extern ButtonsState globalPreviousButtonState;
-
-class ButtonsState {
-    
-private:
-    
-    uint8_t state = 0x00;
-    
-    void setState(uint8_t newValue) {
-        state = newValue;
-        
-        globalPreviousButtonState = globalPreviousButtonState;
-        globalButtonsState = *this;
-        
-    }
-    
-public:
-    
-    void press(Buttons button) {
-        setState(state |= button);
-    }
-    
-    void release(Buttons button) {
-        setState(state &= ~(button));
-    }
-    
-    bool pressed(Buttons button) {
-        return !!(state & button);
-    }
-};
-
+ButtonsState globalButtonsState;
+ButtonsState globalPreviousButtonState;
 
 struct {
     int     keycode;
@@ -64,12 +23,6 @@ struct {
     { 123, LEFT_BUTTON  },
     { 124, RIGHT_BUTTON },
 };
-
-extern const int WIDTH;
-extern const int HEIGHT;
-
-void setup();
-void loop();
 
 @interface BoiThread : NSThread
 @property(assign) id  deliverFrameTarget;
@@ -108,17 +61,7 @@ void want_a_frame(const uint8_t * data, int w, int h) {
     auto nsdata  = [NSMutableData dataWithBytes:data length:w * h];
     auto dstByte = (uint8_t *)nsdata.mutableBytes;
     
-    for (int i = 0; i < (w * h / 8); i++) {
-        auto block = data[i];
-        
-        for (int j = 0; j < 8; j++) {
-            auto x =  i % WIDTH;
-            auto y = (i / WIDTH) * 8 + j;
-            
-            auto bit = block >> j;
-            dstByte[y * WIDTH + x] = ((bit & 0b00000001) == 0b00000001) ? 0xff : 0x00;
-        }
-    }
+    ConvertArduboyBitmap(data, dstByte, w, h);
     
     [thread.deliverFrameTarget performSelectorOnMainThread:thread.deliverFrameAction
                                                 withObject:nsdata

@@ -30,6 +30,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3F49931B20AC4C8400CBD7B7 /* MaschineBoi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MaschineBoi.h; sourceTree = "<group>"; };
 		3F5FF63920A9E0C000302C41 /* Arduboy2Font.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Arduboy2Font.h; sourceTree = "<group>"; };
 		3F5FF63F20AAD30300302C41 /* PacMaschine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PacMaschine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F5FF64120AAD30300302C41 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -99,6 +100,7 @@
 				3F8977DC20A5D36A00EC401A /* ArduBoyPlaytune.h */,
 				3F8977DD20A5D36A00EC401A /* ArduBoy2.h */,
 				3F5FF63920A9E0C000302C41 /* Arduboy2Font.h */,
+				3F49931B20AC4C8400CBD7B7 /* MaschineBoi.h */,
 			);
 			path = MaschineBoi;
 			sourceTree = "<group>";

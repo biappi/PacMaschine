@@ -18,16 +18,13 @@
 
 #include "Arduboy2Font.h"
 
+#include "MaschineBoi.h"
+
 #define PROGMEM
 #define byte    uint8_t
 #define boolean bool
 
 using namespace std;
-
-extern const int       WIDTH  = 255;
-extern const int       HEIGHT =  64;
-
-void want_a_frame(const uint8_t * data, int w, int h);
 
 struct Rect {
     int x, y, width, height;
@@ -45,56 +42,6 @@ public:
     }
     
 };
-
-enum Colors {
-    BLACK,
-    WHITE,
-};
-
-enum Buttons {
-    UP_BUTTON    = 0x01,
-    DOWN_BUTTON  = 0x02,
-    RIGHT_BUTTON = 0x04,
-    LEFT_BUTTON  = 0x08,
-    A_BUTTON     = 0x10,
-    B_BUTTON     = 0x20,
-};
-
-struct ButtonsState;
-
-extern ButtonsState globalButtonsState;
-extern ButtonsState globalPreviousButtonState;
-
-class ButtonsState {
-    
-private:
-    
-    uint8_t state = 0x00;
-    
-    void setState(uint8_t newValue) {
-        state = newValue;
-        
-        globalPreviousButtonState = globalPreviousButtonState;
-        globalButtonsState = *this;
-    }
-    
-public:
-    
-    void press(Buttons button) {
-        setState(state |= button);
-    }
-    
-    void release(Buttons button) {
-        setState(state &= ~(button));
-    }
-    
-    bool pressed(Buttons button) {
-        return !!(state & button);
-    }
-};
-
-ButtonsState globalButtonsState;
-ButtonsState globalPreviousButtonState;
 
 class Arduboy2 {
 public:
