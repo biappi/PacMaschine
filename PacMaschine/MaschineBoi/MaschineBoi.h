@@ -13,8 +13,8 @@ static const int WIDTH  = 255;
 static const int HEIGHT =  64;
 
 enum Colors {
-    BLACK,
-    WHITE,
+    BLACK = 0,
+    WHITE = 1,
 };
 
 enum Buttons {

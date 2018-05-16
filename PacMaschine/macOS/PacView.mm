@@ -44,14 +44,17 @@ struct {
 
 - (void)main {
     setup();
-    
-    while (1)
-        loop();
+    [self performSelector:@selector(loop) withObject:nil afterDelay:0];
+    [NSRunLoop.currentRunLoop run];
 }
 
 - (void)loop {
-    loop();
+    @autoreleasepool {
+        loop();
+    }
+        
     [self performSelector:@selector(loop) withObject:nil afterDelay:0];
+
 }
 
 @end

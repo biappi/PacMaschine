@@ -26,6 +26,8 @@
 
 using namespace std;
 
+uint8_t sBuffer[WIDTH * HEIGHT];
+
 struct Rect {
     int x, y, width, height;
 };
@@ -34,13 +36,41 @@ struct Point {
     int x, y;
 };
 
+void drawPixel(int16_t x, int16_t y, Colors color = WHITE) {
+    if ((x < 0 || x >= WIDTH) ||
+        (y < 0 || y >= HEIGHT))
+    {
+        return;
+    }
+    
+    uint8_t color_byte = color ? 0xff : 0x00;
+    auto bit  = (0b00000001 << (y % 8));
+    auto prev = sBuffer[(y / 8) * WIDTH + x];
+    sBuffer[(y / 8) * WIDTH + x] = (prev & ~bit) | (color_byte & bit);
+}
+
 class Sprites {
 public:
     
-    void drawPlusMask(int x, int y, const uint8_t * mask, int frame) {
+    void drawPlusMask(int s_x, int s_y, const uint8_t * data, int frame) {
+        auto width  = *data++;
+        auto height = *data++;
         
+        data += frame * width * height * 2 / 8;
+        
+        for (int x = 0; x < width; x++) {
+            for (int y = 0; y < height / 8; y++) {
+                auto block = data[width * y + (x * 2)];
+                auto mask  = data[width * y + (x * 2) + 1];
+                
+                for (int i = 0; i < 8; i++) {
+                    auto color = (block >> i) ? WHITE : BLACK;
+                    if ((mask >> i) & 1)
+                        drawPixel(s_x + x, s_y + y * 8 + i, color);
+               }
+            }
+        }
     }
-    
 };
 
 class Arduboy2 {
@@ -97,10 +127,8 @@ public:
     
     // -- //
     
-    uint8_t sBuffer[WIDTH * HEIGHT];
-    
-    void drawPixel(int16_t x, int16_t y, Colors color) {
-        sBuffer[y * WIDTH + x] = color;
+    void drawPixel(int16_t x, int16_t y, Colors color = WHITE) {
+        ::drawPixel(x, y, color);
     }
     
     void drawCircle(int16_t x0, int16_t y0, uint16_t r, Colors color = WHITE) {
@@ -204,7 +232,7 @@ public:
                     const uint8_t * bitmap,
                     int w,
                     int h,
-                    Colors color = BLACK)
+                    Colors color = WHITE)
     {
         if (x+w < 0 || x > WIDTH-1 || y+h < 0 || y > HEIGHT-1)
             return;
