@@ -52,13 +52,49 @@ enum Colors {
 };
 
 enum Buttons {
-	UP_BUTTON,
-	DOWN_BUTTON,
-	RIGHT_BUTTON,
-	LEFT_BUTTON,
-	A_BUTTON,
-	B_BUTTON,
+	UP_BUTTON    = 0x01,
+	DOWN_BUTTON  = 0x02,
+	RIGHT_BUTTON = 0x04,
+	LEFT_BUTTON  = 0x08,
+	A_BUTTON     = 0x10,
+	B_BUTTON     = 0x20,
 };
+
+struct ButtonsState;
+
+extern ButtonsState globalButtonsState;
+extern ButtonsState globalPreviousButtonState;
+
+class ButtonsState {
+	
+private:
+	
+	uint8_t state = 0x00;
+	
+	void setState(uint8_t newValue) {
+		state = newValue;
+		
+		globalPreviousButtonState = globalPreviousButtonState;
+		globalButtonsState = *this;
+	}
+	
+public:
+	
+	void press(Buttons button) {
+		setState(state |= button);
+	}
+	
+	void release(Buttons button) {
+		setState(state &= ~(button));
+	}
+	
+	bool pressed(Buttons button) {
+		return !!(state & button);
+	}
+};
+
+ButtonsState globalButtonsState;
+ButtonsState globalPreviousButtonState;
 
 class Arduboy2 {
 public:
@@ -100,17 +136,16 @@ public:
 		memset(sBuffer, 0, WIDTH * HEIGHT);
 	}
 
+	int frameCount = 0;
+	
 	bool nextFrame() {
+		frameCount++;
 		usleep(1/framerate * 1000000);
 		return true;
 	}
 	
-	void delay() {
-		
-	}
-	
 	bool everyXFrames(int frames) {
-		return false;
+		return frameCount % frames;
 	}
 	
 	// -- //
@@ -379,15 +414,14 @@ public:
 	// -- //
 	
 	void pollButtons() {
-		
 	}
 	
 	bool justPressed(Buttons button) {
-		return false;
+		return globalButtonsState.pressed(button) && !globalPreviousButtonState.pressed(button);
 	}
 	
 	bool pressed(Buttons button) {
-		return false;
+		return globalButtonsState.pressed(button);
 	}
 	
 	// -- //

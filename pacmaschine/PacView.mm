@@ -8,6 +8,63 @@
 
 #import "PacView.h"
 
+enum Buttons {
+	UP_BUTTON    = 0x01,
+	DOWN_BUTTON  = 0x02,
+	RIGHT_BUTTON = 0x04,
+	LEFT_BUTTON  = 0x08,
+	A_BUTTON     = 0x10,
+	B_BUTTON     = 0x20,
+
+};
+
+struct ButtonsState;
+
+extern ButtonsState globalButtonsState;
+extern ButtonsState globalPreviousButtonState;
+
+class ButtonsState {
+	
+private:
+	
+	uint8_t state = 0x00;
+	
+	void setState(uint8_t newValue) {
+		state = newValue;
+		
+		globalPreviousButtonState = globalPreviousButtonState;
+		globalButtonsState = *this;
+		
+	}
+	
+public:
+	
+	void press(Buttons button) {
+		setState(state |= button);
+	}
+	
+	void release(Buttons button) {
+		setState(state &= ~(button));
+	}
+	
+	bool pressed(Buttons button) {
+		return !!(state & button);
+	}
+};
+
+
+struct {
+	int     keycode;
+	Buttons button;
+} keyCodeToButtons[] = {
+	{   0, A_BUTTON     }, // 'a'
+	{   1, A_BUTTON     }, // 's'
+	{ 125, DOWN_BUTTON  }, // arrows
+	{ 126, UP_BUTTON    },
+	{ 123, LEFT_BUTTON  },
+	{ 124, RIGHT_BUTTON },
+};
+
 extern const int WIDTH;
 extern const int HEIGHT;
 
@@ -39,20 +96,20 @@ void loop();
 		loop();
 }
 
+- (void)loop {
+	loop();
+	[self performSelector:@selector(loop) withObject:nil afterDelay:0];
+}
+
 @end
 
-
 void want_a_frame(const uint8_t * data, int w, int h) {
-	auto thread = BoiThread.thread;
-	
-	auto nsdata = [NSMutableData dataWithBytes:data length:w * h];
-	
-	auto srcBlock = data;
-	auto dstByte  = (uint8_t *)nsdata.mutableBytes;
-
+	auto thread  = BoiThread.thread;
+	auto nsdata  = [NSMutableData dataWithBytes:data length:w * h];
+	auto dstByte = (uint8_t *)nsdata.mutableBytes;
 	
 	for (int i = 0; i < (w * h / 8); i++) {
-		auto block = *srcBlock++;
+		auto block = data[i];
 
 		for (int j = 0; j < 8; j++) {
 			auto x =  i % WIDTH;
@@ -72,6 +129,7 @@ void want_a_frame(const uint8_t * data, int w, int h) {
 {
 	NSMutableData * frameBackingData;
 	CGImageRef      frameImage;
+	ButtonsState    buttonsState;
 }
 
 - (void)awakeFromNib {
@@ -101,6 +159,11 @@ void want_a_frame(const uint8_t * data, int w, int h) {
 	BoiThread.thread.deliverFrameAction = @selector(gotFrame:);
 	
 	[BoiThread.thread start];
+	[self becomeFirstResponder];
+}
+
+- (BOOL)acceptsFirstResponder {
+	return YES;
 }
 
 - (void)gotFrame:(NSData *)frameData {
@@ -118,6 +181,27 @@ void want_a_frame(const uint8_t * data, int w, int h) {
 	CGContextDrawImage((CGContextRef)NSGraphicsContext.currentContext.graphicsPort,
 					   self.bounds,
 					   frameImage);
+}
+
+
+- (void)keyDown:(NSEvent *)event {
+	if (event.isARepeat)
+		return;
+	
+	for (auto &i : keyCodeToButtons) {
+		if (event.keyCode == i.keycode)
+			buttonsState.press(i.button);
+	}
+}
+
+- (void)keyUp:(NSEvent *)event {
+	if (event.isARepeat)
+		return;
+	
+	for (auto &i : keyCodeToButtons) {
+		if (event.keyCode == i.keycode)
+			buttonsState.release(i.button);
+	}
 }
 
 @end
