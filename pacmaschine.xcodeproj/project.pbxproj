@@ -103,6 +103,7 @@
 				3F8977CD20A5D2F200EC401A /* Products */,
 			);
 			sourceTree = "<group>";
+			usesTabs = 0;
 		};
 		3F8977CD20A5D2F200EC401A /* Products */ = {
 			isa = PBXGroup;
