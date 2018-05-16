@@ -69,37 +69,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3F5FF63A20AAD29500302C41 /* arduboy */ = {
-			isa = PBXGroup;
-			children = (
-				3F8977DC20A5D36A00EC401A /* ArduBoyPlaytune.h */,
-				3F8977DD20A5D36A00EC401A /* ArduBoy2.h */,
-				3F5FF63920A9E0C000302C41 /* Arduboy2Font.h */,
-			);
-			path = arduboy;
-			sourceTree = "<group>";
-		};
-		3F5FF64020AAD30300302C41 /* PacMaschine */ = {
+		3F49931920AC3EF500CBD7B7 /* Boilerplate */ = {
 			isa = PBXGroup;
 			children = (
 				3F5FF64120AAD30300302C41 /* AppDelegate.h */,
 				3F5FF64220AAD30300302C41 /* AppDelegate.m */,
-				3F5FF65020AAD3F600302C41 /* PacView.h */,
-				3F5FF65120AAD3F600302C41 /* PacView.mm */,
 				3F5FF64420AAD30600302C41 /* Assets.xcassets */,
 				3F5FF64620AAD30600302C41 /* MainMenu.xib */,
 				3F5FF64920AAD30600302C41 /* Info.plist */,
 				3F5FF64A20AAD30600302C41 /* main.m */,
 				3F5FF64C20AAD30600302C41 /* PacMaschine.entitlements */,
 			);
-			path = PacMaschine;
+			path = Boilerplate;
+			sourceTree = "<group>";
+		};
+		3F49931A20AC3FAC00CBD7B7 /* macOS */ = {
+			isa = PBXGroup;
+			children = (
+				3F49931920AC3EF500CBD7B7 /* Boilerplate */,
+				3F5FF65020AAD3F600302C41 /* PacView.h */,
+				3F5FF65120AAD3F600302C41 /* PacView.mm */,
+			);
+			path = macOS;
+			sourceTree = "<group>";
+		};
+		3F5FF63A20AAD29500302C41 /* MaschineBoi */ = {
+			isa = PBXGroup;
+			children = (
+				3F8977DC20A5D36A00EC401A /* ArduBoyPlaytune.h */,
+				3F8977DD20A5D36A00EC401A /* ArduBoy2.h */,
+				3F5FF63920A9E0C000302C41 /* Arduboy2Font.h */,
+			);
+			path = MaschineBoi;
 			sourceTree = "<group>";
 		};
 		3F8977C320A5D2F100EC401A = {
 			isa = PBXGroup;
 			children = (
-				3F8977CE20A5D2F200EC401A /* pacmaschine */,
-				3F5FF64020AAD30300302C41 /* PacMaschine */,
+				3F8977CE20A5D2F200EC401A /* PacMaschine */,
 				3F8977CD20A5D2F200EC401A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -114,14 +121,15 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		3F8977CE20A5D2F200EC401A /* pacmaschine */ = {
+		3F8977CE20A5D2F200EC401A /* PacMaschine */ = {
 			isa = PBXGroup;
 			children = (
+				3F49931A20AC3FAC00CBD7B7 /* macOS */,
+				3F5FF63A20AAD29500302C41 /* MaschineBoi */,
 				3F8977D620A5D31700EC401A /* pactastic */,
-				3F5FF63A20AAD29500302C41 /* arduboy */,
 				3F8977CF20A5D2F200EC401A /* main.c */,
 			);
-			path = pacmaschine;
+			path = PacMaschine;
 			sourceTree = "<group>";
 		};
 		3F8977D620A5D31700EC401A /* pactastic */ = {
@@ -259,11 +267,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = PacMaschine/PacMaschine.entitlements;
+				CODE_SIGN_ENTITLEMENTS = PacMaschine/macOS/Boilerplate/PacMaschine.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = EPCUPW9SH8;
-				INFOPLIST_FILE = PacMaschine/Info.plist;
+				INFOPLIST_FILE = PacMaschine/macOS/Boilerplate/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -277,11 +285,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = PacMaschine/PacMaschine.entitlements;
+				CODE_SIGN_ENTITLEMENTS = PacMaschine/macOS/Boilerplate/PacMaschine.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = EPCUPW9SH8;
-				INFOPLIST_FILE = PacMaschine/Info.plist;
+				INFOPLIST_FILE = PacMaschine/macOS/Boilerplate/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
