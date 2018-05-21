@@ -13,6 +13,34 @@
 		3F5FF64B20AAD30600302C41 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F5FF64A20AAD30600302C41 /* main.m */; };
 		3F5FF65220AAD3F600302C41 /* PacView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3F5FF65120AAD3F600302C41 /* PacView.mm */; };
 		3F5FF65320AAD42900302C41 /* pactastic.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3F8977D720A5D31800EC401A /* pactastic.cpp */; };
+		3F7BF6A020B378C00066DF8D /* NIServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7BF68220B378BD0066DF8D /* NIServer.m */; };
+		3F7BF6A120B378C00066DF8D /* NIServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7BF68220B378BD0066DF8D /* NIServer.m */; };
+		3F7BF6A220B378C00066DF8D /* NIAgentClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7BF68320B378BD0066DF8D /* NIAgentClient.m */; };
+		3F7BF6A320B378C00066DF8D /* NIAgentClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7BF68320B378BD0066DF8D /* NIAgentClient.m */; };
+		3F7BF6A420B378C00066DF8D /* NIProtocolMessages.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7BF68420B378BD0066DF8D /* NIProtocolMessages.m */; };
+		3F7BF6A520B378C00066DF8D /* NIProtocolMessages.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7BF68420B378BD0066DF8D /* NIProtocolMessages.m */; };
+		3F7BF6A620B378C00066DF8D /* NIMainHandlerClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7BF68520B378BD0066DF8D /* NIMainHandlerClient.m */; };
+		3F7BF6A720B378C00066DF8D /* NIMainHandlerClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7BF68520B378BD0066DF8D /* NIMainHandlerClient.m */; };
+		3F7BF6A820B378C00066DF8D /* NIControllerRequestClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7BF68820B378BE0066DF8D /* NIControllerRequestClient.m */; };
+		3F7BF6A920B378C00066DF8D /* NIControllerRequestClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7BF68820B378BE0066DF8D /* NIControllerRequestClient.m */; };
+		3F7BF6AA20B378C00066DF8D /* NIControllerRequestServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7BF68B20B378BE0066DF8D /* NIControllerRequestServer.m */; };
+		3F7BF6AB20B378C00066DF8D /* NIControllerRequestServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7BF68B20B378BE0066DF8D /* NIControllerRequestServer.m */; };
+		3F7BF6AC20B378C00066DF8D /* NIAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7BF68D20B378BE0066DF8D /* NIAgent.m */; };
+		3F7BF6AD20B378C00066DF8D /* NIAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7BF68D20B378BE0066DF8D /* NIAgent.m */; };
+		3F7BF6AE20B378C00066DF8D /* NIControllerNotificationServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7BF69120B378BE0066DF8D /* NIControllerNotificationServer.m */; };
+		3F7BF6AF20B378C00066DF8D /* NIControllerNotificationServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7BF69120B378BE0066DF8D /* NIControllerNotificationServer.m */; };
+		3F7BF6B020B378C00066DF8D /* NIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7BF69220B378BE0066DF8D /* NIClient.m */; };
+		3F7BF6B120B378C00066DF8D /* NIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7BF69220B378BE0066DF8D /* NIClient.m */; };
+		3F7BF6B220B378C00066DF8D /* NIMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7BF69420B378BF0066DF8D /* NIMessage.m */; };
+		3F7BF6B320B378C00066DF8D /* NIMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7BF69420B378BF0066DF8D /* NIMessage.m */; };
+		3F7BF6B420B378C00066DF8D /* NIImageConversions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7BF69720B378BF0066DF8D /* NIImageConversions.m */; };
+		3F7BF6B520B378C00066DF8D /* NIImageConversions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7BF69720B378BF0066DF8D /* NIImageConversions.m */; };
+		3F7BF6B620B378C00066DF8D /* NIResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7BF69920B378BF0066DF8D /* NIResponse.m */; };
+		3F7BF6B720B378C00066DF8D /* NIResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7BF69920B378BF0066DF8D /* NIResponse.m */; };
+		3F7BF6B820B378C00066DF8D /* NIMainHandlerServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7BF69B20B378BF0066DF8D /* NIMainHandlerServer.m */; };
+		3F7BF6B920B378C00066DF8D /* NIMainHandlerServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7BF69B20B378BF0066DF8D /* NIMainHandlerServer.m */; };
+		3F7BF6BA20B378C00066DF8D /* NIMessageBases.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7BF69C20B378BF0066DF8D /* NIMessageBases.m */; };
+		3F7BF6BB20B378C00066DF8D /* NIMessageBases.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7BF69C20B378BF0066DF8D /* NIMessageBases.m */; };
 		3F8977D020A5D2F200EC401A /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 3F8977CF20A5D2F200EC401A /* main.c */; };
 		3F8977DB20A5D32400EC401A /* pactastic.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3F8977D720A5D31800EC401A /* pactastic.cpp */; };
 /* End PBXBuildFile section */
@@ -42,6 +70,36 @@
 		3F5FF64C20AAD30600302C41 /* PacMaschine.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PacMaschine.entitlements; sourceTree = "<group>"; };
 		3F5FF65020AAD3F600302C41 /* PacView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PacView.h; sourceTree = "<group>"; };
 		3F5FF65120AAD3F600302C41 /* PacView.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = PacView.mm; sourceTree = "<group>"; };
+		3F7BF68220B378BD0066DF8D /* NIServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIServer.m; sourceTree = "<group>"; };
+		3F7BF68320B378BD0066DF8D /* NIAgentClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIAgentClient.m; sourceTree = "<group>"; };
+		3F7BF68420B378BD0066DF8D /* NIProtocolMessages.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIProtocolMessages.m; sourceTree = "<group>"; };
+		3F7BF68520B378BD0066DF8D /* NIMainHandlerClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIMainHandlerClient.m; sourceTree = "<group>"; };
+		3F7BF68620B378BE0066DF8D /* NIMainHandlerServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIMainHandlerServer.h; sourceTree = "<group>"; };
+		3F7BF68720B378BE0066DF8D /* NIMessageBases.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIMessageBases.h; sourceTree = "<group>"; };
+		3F7BF68820B378BE0066DF8D /* NIControllerRequestClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIControllerRequestClient.m; sourceTree = "<group>"; };
+		3F7BF68920B378BE0066DF8D /* NIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIClient.h; sourceTree = "<group>"; };
+		3F7BF68A20B378BE0066DF8D /* NIImageConversions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIImageConversions.h; sourceTree = "<group>"; };
+		3F7BF68B20B378BE0066DF8D /* NIControllerRequestServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIControllerRequestServer.m; sourceTree = "<group>"; };
+		3F7BF68C20B378BE0066DF8D /* NIAgentClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIAgentClient.h; sourceTree = "<group>"; };
+		3F7BF68D20B378BE0066DF8D /* NIAgent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIAgent.m; sourceTree = "<group>"; };
+		3F7BF68E20B378BE0066DF8D /* NIServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIServer.h; sourceTree = "<group>"; };
+		3F7BF68F20B378BE0066DF8D /* TestImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestImage.h; sourceTree = "<group>"; };
+		3F7BF69020B378BE0066DF8D /* NIMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIMessage.h; sourceTree = "<group>"; };
+		3F7BF69120B378BE0066DF8D /* NIControllerNotificationServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIControllerNotificationServer.m; sourceTree = "<group>"; };
+		3F7BF69220B378BE0066DF8D /* NIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIClient.m; sourceTree = "<group>"; };
+		3F7BF69320B378BE0066DF8D /* NIResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIResponse.h; sourceTree = "<group>"; };
+		3F7BF69420B378BF0066DF8D /* NIMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIMessage.m; sourceTree = "<group>"; };
+		3F7BF69520B378BF0066DF8D /* NIMaschineLayouts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIMaschineLayouts.h; sourceTree = "<group>"; };
+		3F7BF69620B378BF0066DF8D /* NIAgent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIAgent.h; sourceTree = "<group>"; };
+		3F7BF69720B378BF0066DF8D /* NIImageConversions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIImageConversions.m; sourceTree = "<group>"; };
+		3F7BF69820B378BF0066DF8D /* NIMainHandlerClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIMainHandlerClient.h; sourceTree = "<group>"; };
+		3F7BF69920B378BF0066DF8D /* NIResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIResponse.m; sourceTree = "<group>"; };
+		3F7BF69A20B378BF0066DF8D /* NIControllerNotificationServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIControllerNotificationServer.h; sourceTree = "<group>"; };
+		3F7BF69B20B378BF0066DF8D /* NIMainHandlerServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIMainHandlerServer.m; sourceTree = "<group>"; };
+		3F7BF69C20B378BF0066DF8D /* NIMessageBases.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIMessageBases.m; sourceTree = "<group>"; };
+		3F7BF69D20B378BF0066DF8D /* NIControllerRequestClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIControllerRequestClient.h; sourceTree = "<group>"; };
+		3F7BF69E20B378C00066DF8D /* NIProtocolMessages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIProtocolMessages.h; sourceTree = "<group>"; };
+		3F7BF69F20B378C00066DF8D /* NIControllerRequestServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIControllerRequestServer.h; sourceTree = "<group>"; };
 		3F8977CC20A5D2F200EC401A /* pacmaschine */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = pacmaschine; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F8977CF20A5D2F200EC401A /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		3F8977D720A5D31800EC401A /* pactastic.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = pactastic.cpp; sourceTree = "<group>"; };
@@ -105,6 +163,43 @@
 			path = MaschineBoi;
 			sourceTree = "<group>";
 		};
+		3F7BF68120B378B60066DF8D /* NI Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				3F7BF69620B378BF0066DF8D /* NIAgent.h */,
+				3F7BF68D20B378BE0066DF8D /* NIAgent.m */,
+				3F7BF68C20B378BE0066DF8D /* NIAgentClient.h */,
+				3F7BF68320B378BD0066DF8D /* NIAgentClient.m */,
+				3F7BF68920B378BE0066DF8D /* NIClient.h */,
+				3F7BF69220B378BE0066DF8D /* NIClient.m */,
+				3F7BF69A20B378BF0066DF8D /* NIControllerNotificationServer.h */,
+				3F7BF69120B378BE0066DF8D /* NIControllerNotificationServer.m */,
+				3F7BF69D20B378BF0066DF8D /* NIControllerRequestClient.h */,
+				3F7BF68820B378BE0066DF8D /* NIControllerRequestClient.m */,
+				3F7BF69F20B378C00066DF8D /* NIControllerRequestServer.h */,
+				3F7BF68B20B378BE0066DF8D /* NIControllerRequestServer.m */,
+				3F7BF68A20B378BE0066DF8D /* NIImageConversions.h */,
+				3F7BF69720B378BF0066DF8D /* NIImageConversions.m */,
+				3F7BF69820B378BF0066DF8D /* NIMainHandlerClient.h */,
+				3F7BF68520B378BD0066DF8D /* NIMainHandlerClient.m */,
+				3F7BF68620B378BE0066DF8D /* NIMainHandlerServer.h */,
+				3F7BF69B20B378BF0066DF8D /* NIMainHandlerServer.m */,
+				3F7BF69520B378BF0066DF8D /* NIMaschineLayouts.h */,
+				3F7BF69020B378BE0066DF8D /* NIMessage.h */,
+				3F7BF69420B378BF0066DF8D /* NIMessage.m */,
+				3F7BF68720B378BE0066DF8D /* NIMessageBases.h */,
+				3F7BF69C20B378BF0066DF8D /* NIMessageBases.m */,
+				3F7BF69E20B378C00066DF8D /* NIProtocolMessages.h */,
+				3F7BF68420B378BD0066DF8D /* NIProtocolMessages.m */,
+				3F7BF69320B378BE0066DF8D /* NIResponse.h */,
+				3F7BF69920B378BF0066DF8D /* NIResponse.m */,
+				3F7BF68E20B378BE0066DF8D /* NIServer.h */,
+				3F7BF68220B378BD0066DF8D /* NIServer.m */,
+				3F7BF68F20B378BE0066DF8D /* TestImage.h */,
+			);
+			path = "NI Protocol";
+			sourceTree = "<group>";
+		};
 		3F8977C320A5D2F100EC401A = {
 			isa = PBXGroup;
 			children = (
@@ -126,6 +221,7 @@
 		3F8977CE20A5D2F200EC401A /* PacMaschine */ = {
 			isa = PBXGroup;
 			children = (
+				3F7BF68120B378B60066DF8D /* NI Protocol */,
 				3F49931A20AC3FAC00CBD7B7 /* macOS */,
 				3F5FF63A20AAD29500302C41 /* MaschineBoi */,
 				3F8977D620A5D31700EC401A /* pactastic */,
@@ -235,10 +331,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F7BF6AF20B378C00066DF8D /* NIControllerNotificationServer.m in Sources */,
 				3F5FF65220AAD3F600302C41 /* PacView.mm in Sources */,
+				3F7BF6AB20B378C00066DF8D /* NIControllerRequestServer.m in Sources */,
+				3F7BF6A720B378C00066DF8D /* NIMainHandlerClient.m in Sources */,
+				3F7BF6A920B378C00066DF8D /* NIControllerRequestClient.m in Sources */,
 				3F5FF64B20AAD30600302C41 /* main.m in Sources */,
+				3F7BF6B320B378C00066DF8D /* NIMessage.m in Sources */,
+				3F7BF6B920B378C00066DF8D /* NIMainHandlerServer.m in Sources */,
 				3F5FF65320AAD42900302C41 /* pactastic.cpp in Sources */,
+				3F7BF6B120B378C00066DF8D /* NIClient.m in Sources */,
+				3F7BF6A120B378C00066DF8D /* NIServer.m in Sources */,
+				3F7BF6BB20B378C00066DF8D /* NIMessageBases.m in Sources */,
 				3F5FF64320AAD30300302C41 /* AppDelegate.m in Sources */,
+				3F7BF6AD20B378C00066DF8D /* NIAgent.m in Sources */,
+				3F7BF6A520B378C00066DF8D /* NIProtocolMessages.m in Sources */,
+				3F7BF6B720B378C00066DF8D /* NIResponse.m in Sources */,
+				3F7BF6A320B378C00066DF8D /* NIAgentClient.m in Sources */,
+				3F7BF6B520B378C00066DF8D /* NIImageConversions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,7 +357,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F8977DB20A5D32400EC401A /* pactastic.cpp in Sources */,
+				3F7BF6AA20B378C00066DF8D /* NIControllerRequestServer.m in Sources */,
 				3F8977D020A5D2F200EC401A /* main.c in Sources */,
+				3F7BF6A020B378C00066DF8D /* NIServer.m in Sources */,
+				3F7BF6A420B378C00066DF8D /* NIProtocolMessages.m in Sources */,
+				3F7BF6BA20B378C00066DF8D /* NIMessageBases.m in Sources */,
+				3F7BF6B620B378C00066DF8D /* NIResponse.m in Sources */,
+				3F7BF6AC20B378C00066DF8D /* NIAgent.m in Sources */,
+				3F7BF6B420B378C00066DF8D /* NIImageConversions.m in Sources */,
+				3F7BF6A820B378C00066DF8D /* NIControllerRequestClient.m in Sources */,
+				3F7BF6B020B378C00066DF8D /* NIClient.m in Sources */,
+				3F7BF6A220B378C00066DF8D /* NIAgentClient.m in Sources */,
+				3F7BF6AE20B378C00066DF8D /* NIControllerNotificationServer.m in Sources */,
+				3F7BF6B220B378C00066DF8D /* NIMessage.m in Sources */,
+				3F7BF6B820B378C00066DF8D /* NIMainHandlerServer.m in Sources */,
+				3F7BF6A620B378C00066DF8D /* NIMainHandlerClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
