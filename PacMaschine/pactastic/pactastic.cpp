@@ -49,7 +49,7 @@ struct Target {
   byte Size;
   void init() {
     Size = 15;
-    x =  1 + random(2, 31) * 4;
+    x =  1 + random(2, 61) * 4;
     y =  1 + random(2, 15) * 4 ;
     Rect scoreRect = {.x = WIDTH / 2 - 8, .y = 0, .width = 16, .height = 10};
     Rect playerRect = {.x = playerX, .y = playerY, .width = PLAYER_SIZE, .height = PLAYER_SIZE};
@@ -308,20 +308,25 @@ void loop() {
         byte x1 = 0;
         byte x2 = WIDTH - PLAYER_SIZE;
         while (x1 < playerX) {
-          x1++;
-          x2--;
+          x1 += 4;
+          x2 -= 4;
           arduboy.clear();
-          //DRAW BACKGROUND
-          arduboy.drawBitmap(0, 0, background, 128, 64);
+            
+            //DRAW BACKGROUND
+            arduboy.drawBitmap(0, 0, background, 128, 64);
+            arduboy.drawBitmap(WIDTH/2, 0, background, 128, 64);
+            arduboy.fillRect(WIDTH / 2 - 5, 0, 10, 64, BLACK);
+            arduboy.fillRect(WIDTH / 2 - 5, 0, 10, 1, WHITE);
+            arduboy.fillRect(WIDTH / 2 - 5, 3, 10, 1, WHITE);
+            arduboy.fillRect(WIDTH / 2 - 5, 63 - 0, 10, 1, WHITE);
+            arduboy.fillRect(WIDTH / 2 - 5, 63 - 3, 10, 1, WHITE);
           arduboy.setCursor(WIDTH / 2 - 14, HEIGHT / 2 - 14);
           arduboy.print("Ready!");
           sprites.drawPlusMask(x1, playerY, pacRight_plus_mask, playerFrame);
           sprites.drawPlusMask(x2, playerY, pacRight_plus_mask, playerFrame);
           arduboy.display();
-          delay(2);
         }
         playerIntroPlayed = true;
-        delay(4500); //delay to play intro song
 
       }
 
@@ -333,6 +338,14 @@ void loop() {
       checkIfScored();
 
 
+          //DRAW BACKGROUND
+          arduboy.drawBitmap(0, 0, background, 128, 64);
+          arduboy.drawBitmap(WIDTH/2, 0, background, 128, 64);
+          arduboy.fillRect(WIDTH / 2 - 5, 0, 10, 64, BLACK);
+          arduboy.fillRect(WIDTH / 2 - 5, 0, 10, 1, WHITE);
+          arduboy.fillRect(WIDTH / 2 - 5, 3, 10, 1, WHITE);
+          arduboy.fillRect(WIDTH / 2 - 5, 63 - 0, 10, 1, WHITE);
+          arduboy.fillRect(WIDTH / 2 - 5, 63 - 3, 10, 1, WHITE);
 
       //We print score to screen
       arduboy.setCursor(WIDTH / 2 - 5, 5);
@@ -342,8 +355,6 @@ void loop() {
       arduboy.fillCircle(target.x, target.y, 2);
       target.Update();
       updateEnemies();
-      //DRAW BACKGROUND
-      arduboy.drawBitmap(0, 0, background, 128, 64);
 
       //UPDATE PLAYER XY
 

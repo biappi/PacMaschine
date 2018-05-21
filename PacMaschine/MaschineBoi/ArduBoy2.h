@@ -130,6 +130,14 @@ public:
         ::drawPixel(x, y, color);
     }
     
+    void fillRect(int16_t x, int16_t y, int16_t w, int16_t h, Colors color = WHITE) {
+        for (int i = 0; i < h; i++) {
+            for (int j = 0; j < w; j++) {
+                ::drawPixel(x + j, y + i, color);
+            }
+        }
+    }
+    
     void drawCircle(int16_t x0, int16_t y0, uint16_t r, Colors color = WHITE) {
         int16_t f = 1 - r;
         int16_t ddF_x = 1;
@@ -432,7 +440,7 @@ int random(int a, int b) {
 }
 
 void delay(int ms) {
-    usleep(ms * 1000);
+    usleep((ms / 2)  * 1000);
 }
 
 
