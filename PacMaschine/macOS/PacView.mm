@@ -44,17 +44,20 @@ struct {
 
 - (void)main {
     setup();
-    [self performSelector:@selector(loop) withObject:nil afterDelay:1/globalFramerate];
+    [self performSelector:@selector(loop) withObject:nil afterDelay:0];
     [NSRunLoop.currentRunLoop run];
 }
 
 - (void)loop {
-    @autoreleasepool {
-        loop();
+    while (true) {
+        @autoreleasepool {
+            loop();
+        }
     }
-        
-    [self performSelector:@selector(loop) withObject:nil afterDelay:1/globalFramerate];
+}
 
+- (void)stopLoop {
+    CFRunLoopStop(CFRunLoopGetCurrent());
 }
 
 @end
@@ -70,6 +73,9 @@ void want_a_frame(const uint8_t * data, int w, int h) {
         [thread.deliverFrameTarget performSelectorOnMainThread:thread.deliverFrameAction
                                                     withObject:nsdata
                                                  waitUntilDone:NO];
+        
+        [thread performSelector:@selector(stopLoop) withObject:nil afterDelay:1/globalFramerate];
+        [NSRunLoop.currentRunLoop run];
     }
 }
 
