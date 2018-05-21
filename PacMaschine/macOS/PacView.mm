@@ -60,15 +60,17 @@ struct {
 @end
 
 void want_a_frame(const uint8_t * data, int w, int h) {
-    auto thread  = BoiThread.thread;
-    auto nsdata  = [NSMutableData dataWithBytes:data length:w * h];
-    auto dstByte = (uint8_t *)nsdata.mutableBytes;
-    
-    ConvertArduboyBitmap(data, dstByte, w, h);
-    
-    [thread.deliverFrameTarget performSelectorOnMainThread:thread.deliverFrameAction
-                                                withObject:nsdata
-                                             waitUntilDone:NO];
+    @autoreleasepool {
+        auto thread  = BoiThread.thread;
+        auto nsdata  = [NSMutableData dataWithBytes:data length:w * h];
+        auto dstByte = (uint8_t *)nsdata.mutableBytes;
+        
+        ConvertArduboyBitmap(data, dstByte, w, h);
+        
+        [thread.deliverFrameTarget performSelectorOnMainThread:thread.deliverFrameAction
+                                                    withObject:nsdata
+                                                 waitUntilDone:NO];
+    }
 }
 
 @implementation PacView
