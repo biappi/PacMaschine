@@ -424,8 +424,12 @@ public:
     bool playing() { return false; }
 };
 
-int random(int a, int b = 0) {
-    return (rand() % (a - b)) + b;
+int random (int a) {
+    return rand() % a;
+}
+
+int random(int a, int b) {
+    return (rand() % (b - a)) + a;
 }
 
 void delay(int ms) {
