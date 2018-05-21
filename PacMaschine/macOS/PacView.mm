@@ -44,7 +44,7 @@ struct {
 
 - (void)main {
     setup();
-    [self performSelector:@selector(loop) withObject:nil afterDelay:0];
+    [self performSelector:@selector(loop) withObject:nil afterDelay:1/globalFramerate];
     [NSRunLoop.currentRunLoop run];
 }
 
@@ -53,7 +53,7 @@ struct {
         loop();
     }
         
-    [self performSelector:@selector(loop) withObject:nil afterDelay:0];
+    [self performSelector:@selector(loop) withObject:nil afterDelay:1/globalFramerate];
 
 }
 

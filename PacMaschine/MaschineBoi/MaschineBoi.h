@@ -30,6 +30,7 @@ class ButtonsState;
 
 extern ButtonsState globalButtonsState;
 extern ButtonsState globalPreviousButtonState;
+extern double       globalFramerate;
 
 class ButtonsState {
     

@@ -28,6 +28,8 @@ using namespace std;
 
 uint8_t sBuffer[WIDTH * HEIGHT];
 
+double globalFramerate = 30;
+
 struct Rect {
     int x, y, width, height;
 };
@@ -99,10 +101,8 @@ public:
     
     // -- //
     
-    int framerate = 30;
-    
     void setFrameRate(int rate) {
-        framerate = rate;
+        globalFramerate = rate;
     }
     
     void begin() {
@@ -117,7 +117,6 @@ public:
     
     bool nextFrame() {
         frameCount++;
-        usleep(1/framerate * 1000000);
         return true;
     }
     
