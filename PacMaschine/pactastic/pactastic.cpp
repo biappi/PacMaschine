@@ -312,7 +312,7 @@ void loop() {
           x2--;
           arduboy.clear();
           //DRAW BACKGROUND
-          arduboy.drawBitmap(0, 0, background, WIDTH, HEIGHT);
+          arduboy.drawBitmap(0, 0, background, 128, 64);
           arduboy.setCursor(WIDTH / 2 - 14, HEIGHT / 2 - 14);
           arduboy.print("Ready!");
           sprites.drawPlusMask(x1, playerY, pacRight_plus_mask, playerFrame);
@@ -343,7 +343,7 @@ void loop() {
       target.Update();
       updateEnemies();
       //DRAW BACKGROUND
-      arduboy.drawBitmap(0, 0, background, WIDTH, HEIGHT);
+      arduboy.drawBitmap(0, 0, background, 128, 64);
 
       //UPDATE PLAYER XY
 
