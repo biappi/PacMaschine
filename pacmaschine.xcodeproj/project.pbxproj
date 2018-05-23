@@ -43,6 +43,7 @@
 		3F7BF6BB20B378C00066DF8D /* NIMessageBases.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7BF69C20B378BF0066DF8D /* NIMessageBases.m */; };
 		3F8977D020A5D2F200EC401A /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 3F8977CF20A5D2F200EC401A /* main.c */; };
 		3F8977DB20A5D32400EC401A /* pactastic.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3F8977D720A5D31800EC401A /* pactastic.cpp */; };
+		3FE2ED6F20B58E200037203D /* BoiThread.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3FE2ED6E20B58E200037203D /* BoiThread.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -108,6 +109,8 @@
 		3F8977DA20A5D31800EC401A /* bgm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bgm.h; sourceTree = "<group>"; };
 		3F8977DC20A5D36A00EC401A /* ArduBoyPlaytune.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArduBoyPlaytune.h; sourceTree = "<group>"; };
 		3F8977DD20A5D36A00EC401A /* ArduBoy2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArduBoy2.h; sourceTree = "<group>"; };
+		3FE2ED6D20B58E200037203D /* BoiThread.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BoiThread.h; sourceTree = "<group>"; };
+		3FE2ED6E20B58E200037203D /* BoiThread.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = BoiThread.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,10 +158,9 @@
 		3F5FF63A20AAD29500302C41 /* MaschineBoi */ = {
 			isa = PBXGroup;
 			children = (
-				3F8977DC20A5D36A00EC401A /* ArduBoyPlaytune.h */,
-				3F8977DD20A5D36A00EC401A /* ArduBoy2.h */,
-				3F5FF63920A9E0C000302C41 /* Arduboy2Font.h */,
 				3F49931B20AC4C8400CBD7B7 /* MaschineBoi.h */,
+				3FE2ED6D20B58E200037203D /* BoiThread.h */,
+				3FE2ED6E20B58E200037203D /* BoiThread.mm */,
 			);
 			path = MaschineBoi;
 			sourceTree = "<group>";
@@ -223,6 +225,7 @@
 			children = (
 				3F7BF68120B378B60066DF8D /* NI Protocol */,
 				3F49931A20AC3FAC00CBD7B7 /* macOS */,
+				3FE2ED6C20B58C970037203D /* ArduboyCompatibility */,
 				3F5FF63A20AAD29500302C41 /* MaschineBoi */,
 				3F8977D620A5D31700EC401A /* pactastic */,
 				3F8977CF20A5D2F200EC401A /* main.c */,
@@ -239,6 +242,16 @@
 				3F8977D920A5D31800EC401A /* README.md */,
 			);
 			path = pactastic;
+			sourceTree = "<group>";
+		};
+		3FE2ED6C20B58C970037203D /* ArduboyCompatibility */ = {
+			isa = PBXGroup;
+			children = (
+				3F8977DC20A5D36A00EC401A /* ArduBoyPlaytune.h */,
+				3F8977DD20A5D36A00EC401A /* ArduBoy2.h */,
+				3F5FF63920A9E0C000302C41 /* Arduboy2Font.h */,
+			);
+			path = ArduboyCompatibility;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -337,6 +350,7 @@
 				3F7BF6A720B378C00066DF8D /* NIMainHandlerClient.m in Sources */,
 				3F7BF6A920B378C00066DF8D /* NIControllerRequestClient.m in Sources */,
 				3F5FF64B20AAD30600302C41 /* main.m in Sources */,
+				3FE2ED6F20B58E200037203D /* BoiThread.mm in Sources */,
 				3F7BF6B320B378C00066DF8D /* NIMessage.m in Sources */,
 				3F7BF6B920B378C00066DF8D /* NIMainHandlerServer.m in Sources */,
 				3F5FF65320AAD42900302C41 /* pactastic.cpp in Sources */,

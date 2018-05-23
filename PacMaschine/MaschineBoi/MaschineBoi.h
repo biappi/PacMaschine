@@ -9,8 +9,19 @@
 #ifndef MaschineBoi_h
 #define MaschineBoi_h
 
+class ButtonsState;
+
 static const int WIDTH  = 255;
 static const int HEIGHT =  64;
+
+extern uint8_t      globalScreenBuffer[];
+extern double       globalFramerate;
+extern ButtonsState globalButtonsState;
+extern ButtonsState globalPreviousButtonState;
+
+void want_a_frame(const uint8_t * data, int w, int h);
+
+// - //
 
 enum Colors {
     BLACK = 0,
@@ -26,11 +37,7 @@ enum Buttons {
     B_BUTTON     = 0x20,
 };
 
-class ButtonsState;
-
-extern ButtonsState globalButtonsState;
-extern ButtonsState globalPreviousButtonState;
-extern double       globalFramerate;
+// - //
 
 class ButtonsState {
     
@@ -60,6 +67,8 @@ public:
     }
 };
 
+// - //
+
 inline void ConvertArduboyBitmap(const uint8_t * src, uint8_t * dst, int w, int h) {
     for (int i = 0; i < (w * h / 8); i++) {
         auto block = src[i];
@@ -72,6 +81,10 @@ inline void ConvertArduboyBitmap(const uint8_t * src, uint8_t * dst, int w, int 
             dst[y * WIDTH + x] = ((bit & 0b00000001) == 0b00000001) ? 0xff : 0x00;
         }
     }
+}
+
+inline size_t MaschineBitmapByteSizeFor(int w, int h) {
+    return (w * h) / 3 * 2;
 }
 
 inline void ConvertArduboyToMaschine(const uint8_t * src, uint8_t * dst, int w, int h) {
@@ -109,17 +122,12 @@ inline void ConvertArduboyToMaschine(const uint8_t * src, uint8_t * dst, int w, 
                     break;
             }
         }
-        
     }
 }
 
-inline size_t MaschineBitmapByteSizeFor(int w, int h) {
-    return (w * h) / 3 * 2;
-}
+// - //
 
 void setup();
 void loop();
-
-void want_a_frame(const uint8_t * data, int w, int h);
 
 #endif /* MaschineBoi_h */

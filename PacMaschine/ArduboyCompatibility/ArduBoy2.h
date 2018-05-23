@@ -26,10 +26,6 @@
 
 using namespace std;
 
-uint8_t sBuffer[WIDTH * HEIGHT];
-
-double globalFramerate = 30;
-
 struct Rect {
     int x, y, width, height;
 };
@@ -47,8 +43,8 @@ void drawPixel(int16_t x, int16_t y, Colors color = WHITE) {
     
     uint8_t color_byte = color ? 0xff : 0x00;
     auto bit  = (0b00000001 << (y % 8));
-    auto prev = sBuffer[(y / 8) * WIDTH + x];
-    sBuffer[(y / 8) * WIDTH + x] = (prev & ~bit) | (color_byte & bit);
+    auto prev = globalScreenBuffer[(y / 8) * WIDTH + x];
+    globalScreenBuffer[(y / 8) * WIDTH + x] = (prev & ~bit) | (color_byte & bit);
 }
 
 class Sprites {
@@ -110,7 +106,7 @@ public:
     }
     
     void clear() {
-        memset(sBuffer, 0, WIDTH * HEIGHT);
+        memset(globalScreenBuffer, 0, WIDTH * HEIGHT);
     }
     
     int frameCount = 0;
@@ -270,20 +266,20 @@ public:
                     if (iCol + x >= 0) {
                         if (bRow >= 0) {
                             if (color == WHITE)
-                                sBuffer[(bRow * WIDTH) + x + iCol] |=   bitmap[(a * w)+iCol] << yOffset;
+                                globalScreenBuffer[(bRow * WIDTH) + x + iCol] |=   bitmap[(a * w)+iCol] << yOffset;
                             else if (color == BLACK)
-                                sBuffer[(bRow * WIDTH) + x + iCol] &= ~(bitmap[(a * w)+iCol] << yOffset);
+                                globalScreenBuffer[(bRow * WIDTH) + x + iCol] &= ~(bitmap[(a * w)+iCol] << yOffset);
                             else
-                                sBuffer[(bRow * WIDTH) + x + iCol] ^=   bitmap[(a * w)+iCol] << yOffset;
+                                globalScreenBuffer[(bRow * WIDTH) + x + iCol] ^=   bitmap[(a * w)+iCol] << yOffset;
                         }
                         
                         if (yOffset && bRow<(HEIGHT/8)-1 && bRow > -2) {
                             if (color == WHITE)
-                                sBuffer[((bRow+1)*WIDTH) + x + iCol] |=   bitmap[(a*w)+iCol]  >> (8 - yOffset);
+                                globalScreenBuffer[((bRow+1)*WIDTH) + x + iCol] |=   bitmap[(a*w)+iCol]  >> (8 - yOffset);
                             else if (color == BLACK)
-                                sBuffer[((bRow+1)*WIDTH) + x + iCol] &= ~(bitmap[(a*w)+iCol]) >> (8 - yOffset);
+                                globalScreenBuffer[((bRow+1)*WIDTH) + x + iCol] &= ~(bitmap[(a*w)+iCol]) >> (8 - yOffset);
                             else
-                                sBuffer[((bRow+1)*WIDTH) + x + iCol] ^=   bitmap[(a*w)+iCol]  >> (8 - yOffset);
+                                globalScreenBuffer[((bRow+1)*WIDTH) + x + iCol] ^=   bitmap[(a*w)+iCol]  >> (8 - yOffset);
                         }
                     }
                 }
@@ -292,7 +288,7 @@ public:
     }
     
     void display() {
-        want_a_frame(sBuffer, WIDTH, HEIGHT);
+        want_a_frame(globalScreenBuffer, WIDTH, HEIGHT);
     }
     
     // -- //
