@@ -49,16 +49,20 @@ GameButtonsState globalButtonsState;
     CFRunLoopStop(CFRunLoopGetCurrent());
 }
 
+- (void)perform:(void (^)())block {
+    block();
+}
+
 - (void)buttonPress:(Buttons)button {
-    [runLoop performBlock:^{
+    [self performSelector:@selector(perform:) withObject:[^{
         globalButtonsState.press(button);
-    }];
+    } copy]];
 }
 
 - (void)buttonRelease:(Buttons)button {
-    [runLoop performBlock:^{
+    [self performSelector:@selector(perform:) withObject:[^{
         globalButtonsState.release(button);
-    }];
+    } copy]];
 }
 
 @end

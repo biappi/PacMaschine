@@ -69,14 +69,18 @@ struct {
     }
 }
 
+- (void)perform:(void (^)())block {
+    block();
+}
+
 - (void)gotFrame:(NSData *)frameData {
-    [runLoop performBlock:^{
+    [self performSelector:@selector(perform:) withObject:[^{
         ConvertArduboyToMaschine((const uint8_t *)frameData.bytes,
                                  (uint8_t *)self->gameScreen.mutableBytes,
                                  WIDTH,
                                  HEIGHT);
         [self->maschine sendDrawMessage:self->drawMessage];
-    }];
+    } copy]];
 }
 
 - (void)gotFocus {

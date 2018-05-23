@@ -307,6 +307,11 @@
 				TargetAttributes = {
 					3F5FF63E20AAD30300302C41 = {
 						CreatedOnToolsVersion = 9.3;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+						};
 					};
 					3F8977CB20A5D2F200EC401A = {
 						CreatedOnToolsVersion = 9.3;
@@ -413,7 +418,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = PacMaschine/macOS/Boilerplate/PacMaschine.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = EPCUPW9SH8;
@@ -422,6 +426,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = name.malara.antonio.PacMaschine;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -431,7 +436,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = PacMaschine/macOS/Boilerplate/PacMaschine.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = EPCUPW9SH8;
@@ -440,6 +444,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = name.malara.antonio.PacMaschine;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
