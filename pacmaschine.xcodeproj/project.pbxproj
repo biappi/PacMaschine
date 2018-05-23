@@ -13,51 +13,23 @@
 		3F5FF64B20AAD30600302C41 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F5FF64A20AAD30600302C41 /* main.m */; };
 		3F5FF65220AAD3F600302C41 /* PacView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3F5FF65120AAD3F600302C41 /* PacView.mm */; };
 		3F5FF65320AAD42900302C41 /* pactastic.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3F8977D720A5D31800EC401A /* pactastic.cpp */; };
-		3F7BF6A020B378C00066DF8D /* NIServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7BF68220B378BD0066DF8D /* NIServer.m */; };
 		3F7BF6A120B378C00066DF8D /* NIServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7BF68220B378BD0066DF8D /* NIServer.m */; };
-		3F7BF6A220B378C00066DF8D /* NIAgentClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7BF68320B378BD0066DF8D /* NIAgentClient.m */; };
 		3F7BF6A320B378C00066DF8D /* NIAgentClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7BF68320B378BD0066DF8D /* NIAgentClient.m */; };
-		3F7BF6A420B378C00066DF8D /* NIProtocolMessages.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7BF68420B378BD0066DF8D /* NIProtocolMessages.m */; };
 		3F7BF6A520B378C00066DF8D /* NIProtocolMessages.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7BF68420B378BD0066DF8D /* NIProtocolMessages.m */; };
-		3F7BF6A620B378C00066DF8D /* NIMainHandlerClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7BF68520B378BD0066DF8D /* NIMainHandlerClient.m */; };
 		3F7BF6A720B378C00066DF8D /* NIMainHandlerClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7BF68520B378BD0066DF8D /* NIMainHandlerClient.m */; };
-		3F7BF6A820B378C00066DF8D /* NIControllerRequestClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7BF68820B378BE0066DF8D /* NIControllerRequestClient.m */; };
 		3F7BF6A920B378C00066DF8D /* NIControllerRequestClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7BF68820B378BE0066DF8D /* NIControllerRequestClient.m */; };
-		3F7BF6AA20B378C00066DF8D /* NIControllerRequestServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7BF68B20B378BE0066DF8D /* NIControllerRequestServer.m */; };
 		3F7BF6AB20B378C00066DF8D /* NIControllerRequestServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7BF68B20B378BE0066DF8D /* NIControllerRequestServer.m */; };
-		3F7BF6AC20B378C00066DF8D /* NIAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7BF68D20B378BE0066DF8D /* NIAgent.m */; };
 		3F7BF6AD20B378C00066DF8D /* NIAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7BF68D20B378BE0066DF8D /* NIAgent.m */; };
-		3F7BF6AE20B378C00066DF8D /* NIControllerNotificationServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7BF69120B378BE0066DF8D /* NIControllerNotificationServer.m */; };
 		3F7BF6AF20B378C00066DF8D /* NIControllerNotificationServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7BF69120B378BE0066DF8D /* NIControllerNotificationServer.m */; };
-		3F7BF6B020B378C00066DF8D /* NIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7BF69220B378BE0066DF8D /* NIClient.m */; };
 		3F7BF6B120B378C00066DF8D /* NIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7BF69220B378BE0066DF8D /* NIClient.m */; };
-		3F7BF6B220B378C00066DF8D /* NIMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7BF69420B378BF0066DF8D /* NIMessage.m */; };
 		3F7BF6B320B378C00066DF8D /* NIMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7BF69420B378BF0066DF8D /* NIMessage.m */; };
-		3F7BF6B420B378C00066DF8D /* NIImageConversions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7BF69720B378BF0066DF8D /* NIImageConversions.m */; };
 		3F7BF6B520B378C00066DF8D /* NIImageConversions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7BF69720B378BF0066DF8D /* NIImageConversions.m */; };
-		3F7BF6B620B378C00066DF8D /* NIResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7BF69920B378BF0066DF8D /* NIResponse.m */; };
 		3F7BF6B720B378C00066DF8D /* NIResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7BF69920B378BF0066DF8D /* NIResponse.m */; };
-		3F7BF6B820B378C00066DF8D /* NIMainHandlerServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7BF69B20B378BF0066DF8D /* NIMainHandlerServer.m */; };
 		3F7BF6B920B378C00066DF8D /* NIMainHandlerServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7BF69B20B378BF0066DF8D /* NIMainHandlerServer.m */; };
-		3F7BF6BA20B378C00066DF8D /* NIMessageBases.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7BF69C20B378BF0066DF8D /* NIMessageBases.m */; };
 		3F7BF6BB20B378C00066DF8D /* NIMessageBases.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7BF69C20B378BF0066DF8D /* NIMessageBases.m */; };
-		3F8977D020A5D2F200EC401A /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 3F8977CF20A5D2F200EC401A /* main.c */; };
-		3F8977DB20A5D32400EC401A /* pactastic.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3F8977D720A5D31800EC401A /* pactastic.cpp */; };
 		3FE2ED6F20B58E200037203D /* BoiThread.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3FE2ED6E20B58E200037203D /* BoiThread.mm */; };
 		3FE2ED7220B59F420037203D /* MaschineThread.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3FE2ED7120B59F420037203D /* MaschineThread.mm */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		3F8977CA20A5D2F200EC401A /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 1;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		3F49931B20AC4C8400CBD7B7 /* MaschineBoi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MaschineBoi.h; sourceTree = "<group>"; };
@@ -102,8 +74,6 @@
 		3F7BF69D20B378BF0066DF8D /* NIControllerRequestClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIControllerRequestClient.h; sourceTree = "<group>"; };
 		3F7BF69E20B378C00066DF8D /* NIProtocolMessages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIProtocolMessages.h; sourceTree = "<group>"; };
 		3F7BF69F20B378C00066DF8D /* NIControllerRequestServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIControllerRequestServer.h; sourceTree = "<group>"; };
-		3F8977CC20A5D2F200EC401A /* pacmaschine */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = pacmaschine; sourceTree = BUILT_PRODUCTS_DIR; };
-		3F8977CF20A5D2F200EC401A /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		3F8977D720A5D31800EC401A /* pactastic.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = pactastic.cpp; sourceTree = "<group>"; };
 		3F8977D820A5D31800EC401A /* bitmaps.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bitmaps.h; sourceTree = "<group>"; };
 		3F8977D920A5D31800EC401A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -118,13 +88,6 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		3F5FF63C20AAD30300302C41 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3F8977C920A5D2F200EC401A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -219,7 +182,6 @@
 		3F8977CD20A5D2F200EC401A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3F8977CC20A5D2F200EC401A /* pacmaschine */,
 				3F5FF63F20AAD30300302C41 /* PacMaschine.app */,
 			);
 			name = Products;
@@ -229,11 +191,10 @@
 			isa = PBXGroup;
 			children = (
 				3F7BF68120B378B60066DF8D /* NI Protocol */,
-				3F49931A20AC3FAC00CBD7B7 /* macOS */,
-				3FE2ED6C20B58C970037203D /* ArduboyCompatibility */,
+				3FE2ED6C20B58C970037203D /* Arduboy Compatibility */,
 				3F5FF63A20AAD29500302C41 /* MaschineBoi */,
 				3F8977D620A5D31700EC401A /* pactastic */,
-				3F8977CF20A5D2F200EC401A /* main.c */,
+				3F49931A20AC3FAC00CBD7B7 /* macOS */,
 			);
 			path = PacMaschine;
 			sourceTree = "<group>";
@@ -249,14 +210,14 @@
 			path = pactastic;
 			sourceTree = "<group>";
 		};
-		3FE2ED6C20B58C970037203D /* ArduboyCompatibility */ = {
+		3FE2ED6C20B58C970037203D /* Arduboy Compatibility */ = {
 			isa = PBXGroup;
 			children = (
 				3F8977DC20A5D36A00EC401A /* ArduBoyPlaytune.h */,
 				3F8977DD20A5D36A00EC401A /* ArduBoy2.h */,
 				3F5FF63920A9E0C000302C41 /* Arduboy2Font.h */,
 			);
-			path = ArduboyCompatibility;
+			path = "Arduboy Compatibility";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -279,23 +240,6 @@
 			productReference = 3F5FF63F20AAD30300302C41 /* PacMaschine.app */;
 			productType = "com.apple.product-type.application";
 		};
-		3F8977CB20A5D2F200EC401A /* pacmaschine */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 3F8977D320A5D2F200EC401A /* Build configuration list for PBXNativeTarget "pacmaschine" */;
-			buildPhases = (
-				3F8977C820A5D2F200EC401A /* Sources */,
-				3F8977C920A5D2F200EC401A /* Frameworks */,
-				3F8977CA20A5D2F200EC401A /* CopyFiles */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = pacmaschine;
-			productName = pacmaschine;
-			productReference = 3F8977CC20A5D2F200EC401A /* pacmaschine */;
-			productType = "com.apple.product-type.tool";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -313,9 +257,6 @@
 							};
 						};
 					};
-					3F8977CB20A5D2F200EC401A = {
-						CreatedOnToolsVersion = 9.3;
-					};
 				};
 			};
 			buildConfigurationList = 3F8977C720A5D2F100EC401A /* Build configuration list for PBXProject "pacmaschine" */;
@@ -331,7 +272,6 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3F8977CB20A5D2F200EC401A /* pacmaschine */,
 				3F5FF63E20AAD30300302C41 /* PacMaschine */,
 			);
 		};
@@ -374,29 +314,6 @@
 				3F7BF6B720B378C00066DF8D /* NIResponse.m in Sources */,
 				3F7BF6A320B378C00066DF8D /* NIAgentClient.m in Sources */,
 				3F7BF6B520B378C00066DF8D /* NIImageConversions.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3F8977C820A5D2F200EC401A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3F8977DB20A5D32400EC401A /* pactastic.cpp in Sources */,
-				3F7BF6AA20B378C00066DF8D /* NIControllerRequestServer.m in Sources */,
-				3F8977D020A5D2F200EC401A /* main.c in Sources */,
-				3F7BF6A020B378C00066DF8D /* NIServer.m in Sources */,
-				3F7BF6A420B378C00066DF8D /* NIProtocolMessages.m in Sources */,
-				3F7BF6BA20B378C00066DF8D /* NIMessageBases.m in Sources */,
-				3F7BF6B620B378C00066DF8D /* NIResponse.m in Sources */,
-				3F7BF6AC20B378C00066DF8D /* NIAgent.m in Sources */,
-				3F7BF6B420B378C00066DF8D /* NIImageConversions.m in Sources */,
-				3F7BF6A820B378C00066DF8D /* NIControllerRequestClient.m in Sources */,
-				3F7BF6B020B378C00066DF8D /* NIClient.m in Sources */,
-				3F7BF6A220B378C00066DF8D /* NIAgentClient.m in Sources */,
-				3F7BF6AE20B378C00066DF8D /* NIControllerNotificationServer.m in Sources */,
-				3F7BF6B220B378C00066DF8D /* NIMessage.m in Sources */,
-				3F7BF6B820B378C00066DF8D /* NIMainHandlerServer.m in Sources */,
-				3F7BF6A620B378C00066DF8D /* NIMainHandlerClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -559,24 +476,6 @@
 			};
 			name = Release;
 		};
-		3F8977D420A5D2F200EC401A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = EPCUPW9SH8;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		3F8977D520A5D2F200EC401A /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = EPCUPW9SH8;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -594,15 +493,6 @@
 			buildConfigurations = (
 				3F8977D120A5D2F200EC401A /* Debug */,
 				3F8977D220A5D2F200EC401A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		3F8977D320A5D2F200EC401A /* Build configuration list for PBXNativeTarget "pacmaschine" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				3F8977D420A5D2F200EC401A /* Debug */,
-				3F8977D520A5D2F200EC401A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
