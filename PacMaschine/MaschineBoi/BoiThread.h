@@ -8,11 +8,16 @@
 
 #import <Foundation/Foundation.h>
 
+#import "MaschineBoi.h"
+
 @interface BoiThread : NSThread
 
 @property(assign) id  deliverFrameTarget;
 @property(assign) SEL deliverFrameAction;
 
 + (BoiThread *)thread;
+
+- (void)buttonPress:(Buttons)button;
+- (void)buttonRelease:(Buttons)button;
 
 @end

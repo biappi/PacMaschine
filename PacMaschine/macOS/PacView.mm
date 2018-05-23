@@ -7,7 +7,6 @@
 //
 
 #import "PacView.h"
-#import "MaschineBoi.h"
 #import "BoiThread.h"
 
 struct {
@@ -26,7 +25,6 @@ struct {
 {
     NSMutableData * frameBackingData;
     CGImageRef      frameImage;
-    ButtonsState    buttonsState;
 }
 
 - (void)awakeFromNib {
@@ -86,7 +84,7 @@ struct {
     
     for (auto &i : keyCodeToButtons) {
         if (event.keyCode == i.keycode)
-            buttonsState.press(i.button);
+            [BoiThread.thread buttonPress:i.button];
     }
 }
 
@@ -96,7 +94,7 @@ struct {
     
     for (auto &i : keyCodeToButtons) {
         if (event.keyCode == i.keycode)
-            buttonsState.release(i.button);
+           [BoiThread.thread buttonRelease:i.button];
     }
 }
 

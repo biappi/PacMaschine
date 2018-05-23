@@ -9,15 +9,19 @@
 #ifndef MaschineBoi_h
 #define MaschineBoi_h
 
-class ButtonsState;
+#include <stdio.h>
+#include <stdint.h>
+#include <stdlib.h>
+#include <unistd.h>
+
+class GameButtonsState;
 
 static const int WIDTH  = 255;
 static const int HEIGHT =  64;
 
-extern uint8_t      globalScreenBuffer[];
-extern double       globalFramerate;
-extern ButtonsState globalButtonsState;
-extern ButtonsState globalPreviousButtonState;
+extern uint8_t          globalScreenBuffer[];
+extern double           globalFramerate;
+extern GameButtonsState globalButtonsState;
 
 void want_a_frame(const uint8_t * data, int w, int h);
 
@@ -42,28 +46,52 @@ enum Buttons {
 class ButtonsState {
     
 private:
-    
     uint8_t state = 0x00;
     
-    void setState(uint8_t newValue) {
-        state = newValue;
-        
-        globalPreviousButtonState = globalPreviousButtonState;
-        globalButtonsState = *this;
-    }
-    
 public:
-    
     void press(Buttons button) {
-        setState(state |= button);
+        state |= button;
     }
     
     void release(Buttons button) {
-        setState(state &= ~(button));
+        state &= ~(button);
     }
     
     bool pressed(Buttons button) {
         return !!(state & button);
+    }
+};
+
+class GameButtonsState {
+    
+private:
+    ButtonsState previous;
+    ButtonsState current;
+    ButtonsState next;
+    
+public:
+    void press(Buttons button) {
+        next.press(button);
+    }
+    
+    void release(Buttons button) {
+        next.release(button);
+    }
+
+    void poll() {
+        current = next;
+    }
+    
+    void didFrame() {
+        previous = current;
+    }
+    
+    bool pressed(Buttons button) {
+        return current.pressed(button);
+    }
+  
+    bool justPressed(Buttons button) {
+        return current.pressed(button) && !previous.pressed(button);
     }
 };
 

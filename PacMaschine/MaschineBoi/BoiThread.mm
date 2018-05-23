@@ -9,12 +9,14 @@
 #import "MaschineBoi.h"
 #import "BoiThread.h"
 
-uint8_t      globalScreenBuffer[WIDTH * HEIGHT];
-double       globalFramerate = 30;
-ButtonsState globalButtonsState;
-ButtonsState globalPreviousButtonState;
+uint8_t          globalScreenBuffer[WIDTH * HEIGHT];
+double           globalFramerate = 30;
+GameButtonsState globalButtonsState;
 
 @implementation BoiThread
+{
+    NSRunLoop * runLoop;
+}
 
 + (BoiThread *)thread {
     static BoiThread * thread = nil;
@@ -28,13 +30,16 @@ ButtonsState globalPreviousButtonState;
 }
 
 - (void)main {
+    runLoop = NSRunLoop.currentRunLoop;
+    
     setup();
     [self performSelector:@selector(loop) withObject:nil afterDelay:0];
-    [NSRunLoop.currentRunLoop run];
+    [runLoop run];
 }
 
 - (void)loop {
     @autoreleasepool {
+        globalButtonsState.didFrame();
         loop();
     }
     [self performSelector:@selector(loop) withObject:nil afterDelay:0];
@@ -42,6 +47,18 @@ ButtonsState globalPreviousButtonState;
 
 - (void)stopLoop {
     CFRunLoopStop(CFRunLoopGetCurrent());
+}
+
+- (void)buttonPress:(Buttons)button {
+    [runLoop performBlock:^{
+        globalButtonsState.press(button);
+    }];
+}
+
+- (void)buttonRelease:(Buttons)button {
+    [runLoop performBlock:^{
+        globalButtonsState.release(button);
+    }];
 }
 
 @end

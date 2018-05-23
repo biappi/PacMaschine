@@ -9,15 +9,9 @@
 #ifndef ArduBoy_hpp
 #define ArduBoy_hpp
 
-#include <stdio.h>
-#include <stdint.h>
-#include <stdlib.h>
-#include <unistd.h>
-
 #include <algorithm>
 
 #include "Arduboy2Font.h"
-
 #include "MaschineBoi.h"
 
 #define PROGMEM
@@ -392,10 +386,11 @@ public:
     // -- //
     
     void pollButtons() {
+        globalButtonsState.poll();
     }
     
     bool justPressed(Buttons button) {
-        return globalButtonsState.pressed(button) && !globalPreviousButtonState.pressed(button);
+        return globalButtonsState.justPressed(button);
     }
     
     bool pressed(Buttons button) {
