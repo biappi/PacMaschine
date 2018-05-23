@@ -74,6 +74,49 @@ inline void ConvertArduboyBitmap(const uint8_t * src, uint8_t * dst, int w, int 
     }
 }
 
+inline void ConvertArduboyToMaschine(const uint8_t * src, uint8_t * dst, int w, int h) {
+    for (int i = 0; i < w * h; i++) {
+        uint8_t srcColor;
+        
+        {
+            auto x = i % w;
+            auto y = i / w;
+            
+            auto srcBlock = src[(y / 8) * w + x];
+            auto bitIndex = y % 8;
+            auto bitMask  = 1 << bitIndex;
+            
+            srcColor = (srcBlock & bitMask) >> bitIndex;
+        }
+        
+        {
+            uint8_t dstColor = srcColor ? 0x1F : 0x00;
+            size_t  dstPixel = (i / 3) * 2;
+
+            switch (i % 3)
+            {
+                case 0:
+                    dst[dstPixel    ]  = dstColor << 3;
+                    break;
+                    
+                case 1:
+                    dst[dstPixel    ] |= dstColor >> 2;
+                    dst[dstPixel + 1]  = dstColor << 6;
+                    break;
+                    
+                case 2:
+                    dst[dstPixel + 1] |= dstColor;
+                    break;
+            }
+        }
+        
+    }
+}
+
+inline size_t MaschineBitmapByteSizeFor(int w, int h) {
+    return (w * h) / 3 * 2;
+}
+
 void setup();
 void loop();
 
