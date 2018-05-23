@@ -19,7 +19,7 @@
 
 @property(nonatomic, weak) id<NIControllerNotificationsObserver> notificationObserver;
 
-- (void)connect;
+- (BOOL)connectWithClientName:(NSString *)clientName;
 
 - (void)allLedsOff;
 - (void)setLedState:(NILedState *)ledState;

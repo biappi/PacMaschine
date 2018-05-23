@@ -25,23 +25,23 @@
     if ((self = [super init]) == nil)
         return nil;
     
-    _mainHandler = [[NIMainHandlerClient alloc] initWithName:@"NIHWMainHandler"];
-    
     return self;
 }
 
-- (void)connect;
+- (BOOL)connectWithClientName:(NSString *)clientName;
 {
+    _mainHandler = [[NIMainHandlerClient alloc] initWithName:@"NIHWMainHandler"];
+    
     NIDeviceConnectResponse * r = [self.mainHandler connectToControllerWithId:0x00000808
                                                                           boh:'NiMS'
                                                                    clientRole:'prmy'
-                                                                   clientName:@"Testing 123"];
+                                                                   clientName:clientName];
     
     NSLog(@" - %@", r);
     NSLog(@" ");
     
     if (r.success == NO)
-        return;
+        return NO;
     
     _requestClient      = [[NIControllerRequestClient alloc]      initWithName:r.inPortName];
     _notificationServer = [[NIControllerNotificationServer alloc] initWithName:r.outPortName];
@@ -49,6 +49,8 @@
     
     [_notificationServer scheduleInRunLoop:[NSRunLoop currentRunLoop]];
     [_requestClient setNotificationPortName:r.outPortName];
+    
+    return YES;
 }
 
 - (void)allLedsOff;

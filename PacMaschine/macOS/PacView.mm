@@ -8,6 +8,7 @@
 
 #import "PacView.h"
 #import "BoiThread.h"
+#import "MaschineThread.h"
 
 struct {
     int     keycode;
@@ -54,6 +55,8 @@ struct {
     BoiThread.thread.deliverFrameAction = @selector(gotFrame:);
     
     [BoiThread.thread start];
+    [MaschineThread.thread start];
+    
     [self becomeFirstResponder];
 }
 
@@ -64,6 +67,8 @@ struct {
 - (void)gotFrame:(NSData *)frameData {
     if (frameData.length < frameBackingData.length)
         return;
+    
+    [MaschineThread.thread gotFrame:frameData];
     
     memcpy(frameBackingData.mutableBytes,
            frameData.bytes,

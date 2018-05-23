@@ -44,6 +44,7 @@
 		3F8977D020A5D2F200EC401A /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 3F8977CF20A5D2F200EC401A /* main.c */; };
 		3F8977DB20A5D32400EC401A /* pactastic.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3F8977D720A5D31800EC401A /* pactastic.cpp */; };
 		3FE2ED6F20B58E200037203D /* BoiThread.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3FE2ED6E20B58E200037203D /* BoiThread.mm */; };
+		3FE2ED7220B59F420037203D /* MaschineThread.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3FE2ED7120B59F420037203D /* MaschineThread.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -111,6 +112,8 @@
 		3F8977DD20A5D36A00EC401A /* ArduBoy2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArduBoy2.h; sourceTree = "<group>"; };
 		3FE2ED6D20B58E200037203D /* BoiThread.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BoiThread.h; sourceTree = "<group>"; };
 		3FE2ED6E20B58E200037203D /* BoiThread.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = BoiThread.mm; sourceTree = "<group>"; };
+		3FE2ED7020B59F420037203D /* MaschineThread.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MaschineThread.h; sourceTree = "<group>"; };
+		3FE2ED7120B59F420037203D /* MaschineThread.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = MaschineThread.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +164,8 @@
 				3F49931B20AC4C8400CBD7B7 /* MaschineBoi.h */,
 				3FE2ED6D20B58E200037203D /* BoiThread.h */,
 				3FE2ED6E20B58E200037203D /* BoiThread.mm */,
+				3FE2ED7020B59F420037203D /* MaschineThread.h */,
+				3FE2ED7120B59F420037203D /* MaschineThread.mm */,
 			);
 			path = MaschineBoi;
 			sourceTree = "<group>";
@@ -351,6 +356,7 @@
 				3F7BF6A920B378C00066DF8D /* NIControllerRequestClient.m in Sources */,
 				3F5FF64B20AAD30600302C41 /* main.m in Sources */,
 				3FE2ED6F20B58E200037203D /* BoiThread.mm in Sources */,
+				3FE2ED7220B59F420037203D /* MaschineThread.mm in Sources */,
 				3F7BF6B320B378C00066DF8D /* NIMessage.m in Sources */,
 				3F7BF6B920B378C00066DF8D /* NIMainHandlerServer.m in Sources */,
 				3F5FF65320AAD42900302C41 /* pactastic.cpp in Sources */,
