@@ -72,8 +72,6 @@ static CFDataRef CreateResponseForServerPortCallback(CFMessagePortRef local,
             NSLog(@"     IMPLEMENT -[%@ %@]", [self className], selectorString);
             return nil;
         }
-        
-        NSLog(@"%@ <- %@", name, message);
 
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Warc-performSelector-leaks"
@@ -81,9 +79,6 @@ static CFDataRef CreateResponseForServerPortCallback(CFMessagePortRef local,
         response = [self performSelector:selector withObject:message];
 
 #pragma clang diagnostic pop
-        
-        NSLog(@"%@ -> %@", name, response);
-        NSLog(@" ");
         
         return response;
     }

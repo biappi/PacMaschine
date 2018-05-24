@@ -37,9 +37,6 @@
                                                                    clientRole:'prmy'
                                                                    clientName:clientName];
     
-    NSLog(@" - %@", r);
-    NSLog(@" ");
-    
     if (r.success == NO)
         return NO;
     

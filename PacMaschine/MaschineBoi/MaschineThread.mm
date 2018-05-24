@@ -15,7 +15,7 @@ struct {
     NIMaschineButtonsLayout keycode;
     Buttons                 button;
 } keyCodeToButtons[] = {
-    { NIMaschineButton_Play,   A_BUTTON     },
+    { NIMaschineButton_GroupA, A_BUTTON     },
     { NIMaschineButton_Rec,    B_BUTTON     },
     { NIMaschineButton_GroupF, DOWN_BUTTON  },
     { NIMaschineButton_GroupB, UP_BUTTON    },
@@ -33,6 +33,7 @@ struct {
     NSMutableData * gameScreen;
     
     NIDisplayDrawMessage * drawMessage;
+    NILedState           * ledState;
 }
 
 + (MaschineThread *)thread {
@@ -60,6 +61,12 @@ struct {
     drawMessage.displayNumber = 0;
     drawMessage.st7529EncodedImage = gameScreen;
     
+    ledState = [NILedState new];
+    [ledState setLed:NIMaschineLed_GroupB intensity:0x7f];
+    [ledState setLed:NIMaschineLed_GroupE intensity:0x7f];
+    [ledState setLed:NIMaschineLed_GroupF intensity:0x7f];
+    [ledState setLed:NIMaschineLed_GroupG intensity:0x7f];
+    
     if ([maschine connectWithClientName:@"PacMaschine"] == NO) {
         runLoop = nil;
         NSLog(@"Cannot connect to the Maschine software!");
@@ -84,7 +91,8 @@ struct {
 }
 
 - (void)gotFocus {
-    [self->maschine sendDrawMessage:self->drawMessage];
+    [maschine sendDrawMessage:drawMessage];
+    [maschine setLedState:ledState];
 }
 
 - (void)buttonChanged:(NIMaschineButtonsLayout)button pressed:(BOOL)pressed {

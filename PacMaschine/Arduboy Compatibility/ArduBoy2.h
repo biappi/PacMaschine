@@ -92,7 +92,6 @@ public:
     // -- //
     
     void setFrameRate(int rate) {
-        globalFramerate = rate;
     }
     
     void begin() {

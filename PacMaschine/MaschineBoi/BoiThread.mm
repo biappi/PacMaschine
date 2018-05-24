@@ -10,7 +10,7 @@
 #import "BoiThread.h"
 
 uint8_t          globalScreenBuffer[WIDTH * HEIGHT];
-double           globalFramerate = 30;
+double           globalFramerate = 15;
 GameButtonsState globalButtonsState;
 
 @implementation BoiThread
