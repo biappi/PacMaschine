@@ -81,13 +81,13 @@ struct {
 }
 
 - (void)gotFrame:(NSData *)frameData {
-    [self performSelector:@selector(perform:) withObject:[^{
+    [self performSelector:@selector(perform:) withObject:^{
         ConvertArduboyToMaschine((const uint8_t *)frameData.bytes,
                                  (uint8_t *)self->gameScreen.mutableBytes,
                                  WIDTH,
                                  HEIGHT);
         [self->maschine sendDrawMessage:self->drawMessage];
-    } copy]];
+    }];
 }
 
 - (void)gotFocus {

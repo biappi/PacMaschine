@@ -54,9 +54,9 @@ GameButtonsState globalButtonsState;
 }
 
 - (void)buttonPress:(Buttons)button {
-    [self performSelector:@selector(perform:) withObject:[^{
+    [self performSelector:@selector(perform:) withObject:^{
         globalButtonsState.press(button);
-    } copy]];
+    }];
 }
 
 - (void)buttonRelease:(Buttons)button {
